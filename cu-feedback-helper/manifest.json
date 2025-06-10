@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "CU Feedback Helper",
+    "version": "1.0",
+    "description": "Auto-fill teacher feedback or skip it to access dashboard.",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": [
+      "https://cuonline.cuilahore.edu.pk:8091/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://cuonline.cuilahore.edu.pk:8091/Feedback/Survey/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+      }
+    },
+    "icons": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  }
+  
